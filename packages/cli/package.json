@@ -1,0 +1,47 @@
+{
+  "name": "@cookn/cli",
+  "description": "CookN CLI",
+  "version": "0.1.0",
+  "author": "spadino @spadino",
+  "bin": {
+    "cookn": "./bin/run.js"
+  },
+  "bugs": "https://github.com/cookn/cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3"
+  },
+  "devDependencies": {
+    "@oclif/test": "^1.2.8"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/cookn/cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "cookn",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "cookn/cli",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
