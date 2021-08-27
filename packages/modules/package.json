@@ -1,0 +1,7 @@
+{
+  "name": "@cookn/modules",
+  "version": "0.1.0",
+  "description": "Modules for CookN",
+  "main": "index.js",
+  "license": "MIT"
+}
